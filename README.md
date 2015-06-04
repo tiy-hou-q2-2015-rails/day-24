@@ -5,10 +5,22 @@ Day 24 - Relationships and Heroku
 Challenge: Testing and adding methods in Rails
 ----
 
-Make the "Validity" tests pass. Clone this repo, and get it up and running.
+Make the "Validity" tests pass. Clone this repo, and then:
+
+1. `bundle`
+1. `rake db:setup`
 
 To run the tests, run `rake`. You will see 6 failures. Add code to the
 app/models/buyer.rb to make the tests pass.
+
+Example: If it reports "undefined method `awesome?` for User, you might add the
+following to app/models/user.rb:
+
+```
+def awesome?
+  name == "JWo"
+end
+```
 
 
 Today
