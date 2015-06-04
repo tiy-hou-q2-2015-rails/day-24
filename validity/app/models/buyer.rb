@@ -12,7 +12,13 @@ class Buyer < ActiveRecord::Base
     age >= 18
   end
 
-  def age
+  def age # dana's super smart version
+    today = "#{Date.today.year}.#{Date.today.month}#{Date.today.day}".to_f
+    dob   = "#{date_of_birth.year}.#{date_of_birth.month}#{date_of_birth.day}".to_f
+    (today - dob).to_i
+  end
+
+  def old_age #our stupid class version
     years = (Date.today.year - date_of_birth.year)
 
     dob_this_month = Date.today.month == date_of_birth.month
