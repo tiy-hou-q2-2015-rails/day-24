@@ -1,0 +1,21 @@
+<% @city.errors.full_messages.each do |e| %>
+  <p class="alert"><%= e %></p>
+<% end %>
+
+<%= form_for @city do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :state_id %>
+    <%= f.collection_select :state_id, State.all, :id, :abbreviation, prompt: true %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

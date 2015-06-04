@@ -1,0 +1,5 @@
+<%= link_to "Cities", cities_path %>
+
+<h1><%= @city.name %></h1>
+
+<%= link_to 'Delete this city', city_path(id: @city.id), method: 'delete', data: {confirm: "Are you sure?"} %>

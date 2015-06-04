@@ -1,0 +1,18 @@
+// Place all the styles related to the cities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.alert {
+  background: #C0392B;
+  border: 1px solid darken(#C0392B, 20%);
+  padding: 1em;
+  color: #ECF0F1;
+}
+
+.notice {
+  background: #27AE60;
+  border: 1px solid darken(#27AE60, 20%);
+  padding: 1em;
+  color: #ECF0F1;
+}

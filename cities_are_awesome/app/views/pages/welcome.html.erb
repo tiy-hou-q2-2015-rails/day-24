@@ -1,0 +1,10 @@
+<h1>Breakfasts</h1>
+
+
+<ul>
+<% @breakfasts.each do |breakfast| %>
+  <li><%= link_to breakfast.name, breakfast_path(id: breakfast.id) %></li>
+
+<% end %>
+
+</ul>
