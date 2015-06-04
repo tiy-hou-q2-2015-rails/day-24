@@ -2,6 +2,11 @@ require 'test_helper'
 
 class BuyerTest < ActiveSupport::TestCase
 
+  test "will turn 21, but hasn't yet" do
+    minor = Buyer.new(date_of_birth: 21.years.ago + 5.days)
+    assert_equal false, minor.alcohol?, "cannot buy alcohol just yet"
+  end
+
   test "can buy alcohol if 21" do
     assert buyer(22.years).alcohol?, "should be able to buy alcohol"
   end
