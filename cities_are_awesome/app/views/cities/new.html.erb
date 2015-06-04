@@ -1,21 +1,26 @@
+
+<div class="page-header">
+  <h1>New City</h1>
+</div>
+
 <% @city.errors.full_messages.each do |e| %>
   <p class="alert"><%= e %></p>
 <% end %>
 
 <%= form_for @city do |f| %>
 
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group <%= 'has-error' if @city.errors[:name].any? %>">
+    <%= f.label :name, class: "control-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group <%= 'has-error' if @city.errors[:state].any? %>">
+    <%= f.label :state_id, class: "control-label" %>
+    <%= f.collection_select :state_id, State.all, :id, :abbreviation, {prompt: true}, class: "form-control" %>
   </div>
 
   <div>
-    <%= f.label :state_id %>
-    <%= f.collection_select :state_id, State.all, :id, :abbreviation, prompt: true %>
-  </div>
-
-  <div>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 
 <% end %>
