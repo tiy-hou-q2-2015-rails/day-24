@@ -1,0 +1,33 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form {
+  .field_with_errors {
+    display: inline;
+    label {
+      color: red;
+      font-weight: bold;
+    }
+    input {
+      border: 1px solid red;
+    }
+  }
+  label {
+    width: 5em;
+    display: inline-block;
+  }
+  input[type='submit']{
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding: 0.5em;
+  }
+  input[type='text'], select {
+    width: 35em;
+    padding: 0.2em;
+    font-size: 1.5em;
+  }
+  div {
+    padding-bottom: 2em;
+  }
+}

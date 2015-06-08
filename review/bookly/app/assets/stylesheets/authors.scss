@@ -1,0 +1,13 @@
+// Place all the styles related to the Authors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.book-cover {
+  width: 300px;
+  display: inline-block;
+  img {
+    height: 400px;
+    width: 300px;
+    max-width: 100%;
+  }
+}

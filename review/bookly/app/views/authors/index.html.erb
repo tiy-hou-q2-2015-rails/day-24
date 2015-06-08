@@ -1,0 +1,14 @@
+<h1>Authors</h1>
+
+<%= link_to "New Book", new_book_path %>
+
+<% @authors.each do |author| %>
+  <h3><%= link_to author.name, author_path(id: author.id) %></h3>
+
+  <% author.books.each do |book| %>
+    <div class="book-cover">
+      <%= image_tag book.cover %>
+    </div>
+  <% end %>
+
+<% end %>

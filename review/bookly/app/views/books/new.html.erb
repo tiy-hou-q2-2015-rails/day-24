@@ -1,0 +1,22 @@
+<h1>Add New Book</h1>
+
+<%= form_for @book do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :cover %>
+    <%= f.text_field :cover %>
+  </div>
+
+  <div>
+    <%= f.label :author_id %>
+    <%= f.collection_select :author_id, Author.all, :id, :name, prompt: true %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
